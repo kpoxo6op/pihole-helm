@@ -1,0 +1,16 @@
+persistentVolumeClaim:
+  enabled: true
+  storageClass: local-storage  # This uses the storage class defined in your local volume provisioner
+  size: 500Mi  # Adjust the size as per your requirements
+
+serviceWeb:
+  loadBalancerIP: 192.168.1.121
+  annotations:
+    metallb.universe.tf/allow-shared-ip: pihole-svc
+  type: LoadBalancer
+
+serviceDns:
+  loadBalancerIP: 192.168.1.121
+  annotations:
+    metallb.universe.tf/allow-shared-ip: pihole-svc
+  type: LoadBalancer
