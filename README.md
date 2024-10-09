@@ -18,3 +18,7 @@ helm upgrade --install pihole mojo2600/pihole -f values.yaml
 ```sh
 helm template . --name-template pihole --namespace pihole --values values.yaml --debug
 ```
+
+## Access Pi-hole
+
+<http://192.168.1.122/admin>
