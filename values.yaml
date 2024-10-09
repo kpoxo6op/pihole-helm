@@ -101,3 +101,10 @@ probes:
     enabled: false
   readiness:
     enabled: false
+
+containerPorts:
+  http: 80        # HTTP port for Pi-hole
+  https: 443      # HTTPS port for Pi-hole
+  dns: 53         # DNS TCP port for Pi-hole
+  dnsUdp: 53      # DNS UDP port for Pi-hole
+  clientUdp: 67   # DHCP client UDP port
