@@ -1,8 +1,18 @@
+webHttp: "80"
+webHttps: "443"
+
+replicaCount: 1
+strategyType: RollingUpdate
+hostNetwork: false
+hostname: ""
+virtualHost: "pi.hole"
+privileged: false
+
 persistentVolumeClaim:
   enabled: true
   storageClass: local-storage
   size: 500Mi
-  accessModes: 
+  accessModes:
     - ReadWriteOnce
 
 serviceWeb:
@@ -101,6 +111,3 @@ probes:
     enabled: false
   readiness:
     enabled: false
-
-webHttp: "80"
-webHttps: "443"
