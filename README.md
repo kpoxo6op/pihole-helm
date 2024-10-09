@@ -12,3 +12,9 @@ helm install pihole mojo2600/pihole --values values.yaml
 ```sh
 helm upgrade --install pihole mojo2600/pihole -f values.yaml
 ```
+
+## Test Values.yaml
+
+```sh
+helm template . --name-template pihole --namespace pihole --values values.yaml --debug
+```

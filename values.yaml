@@ -1,19 +1,24 @@
 persistentVolumeClaim:
   enabled: true
-  storageClass: local-storage  # This uses the storage class defined local volume provisioner
+  storageClass: local-storage
   size: 500Mi
+  accessModes: 
+    - ReadWriteOnce
 
 serviceWeb:
   loadBalancerIP: 192.168.1.122
   type: LoadBalancer
   http:
     enabled: true
+    port: 80
   https:
     enabled: false
+    port: 443
 
 serviceDns:
   loadBalancerIP: 192.168.1.122
   type: LoadBalancer
+  port: 53
 
 serviceDhcp:
   enabled: false
