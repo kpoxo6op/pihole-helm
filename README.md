@@ -22,3 +22,11 @@ helm template . --name-template pihole --namespace pihole --values values.yaml -
 ## Access Pi-hole
 
 <http://192.168.1.122/admin>
+
+## Password reset
+
+```sh
+kubectl get pods -n pihole
+kubectl exec -it <pod> -n pihole -- bash
+pihole -a -p
+```
