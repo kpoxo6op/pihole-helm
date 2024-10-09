@@ -14,3 +14,6 @@ serviceWeb:
 serviceDns:
   loadBalancerIP: 192.168.1.122
   type: LoadBalancer
+
+dualStack:
+  enabled: false
